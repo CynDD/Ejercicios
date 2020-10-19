@@ -10,36 +10,15 @@ import Counter from './components/Counter.js';
 import Curry from './components/Curry.js';
 import './App.css';
 import Breeds from './components/Breeds.js';
+import NavBar from './components/NavBar.js';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
 
 const App = () => (
     
   <BrowserRouter>
-  
     <main>
-        <ul className='list'>
-          <li className='element'>
-            <NavLink exact to='/' activeClassName='active'>
-              Home
-            </NavLink>
-          </li>
-          <li className='element'>
-            <NavLink to='/counter' activeClassName='active'>
-              Ejercicio 1
-            </NavLink>
-          </li>
-          <li className='element'>
-            <NavLink to='/curry' activeClassName='active'>
-              Ejercicio 2
-            </NavLink>
-          </li>
-          <li className='element'>
-            <NavLink to='/breeds' activeClassName='active'>
-              Ejercicio 3
-            </NavLink>
-          </li>
-        </ul>
-        
-
+    <NavBar />
       <Switch>
         <Route exact path='/' render={() => <h1>Ejercicios Complementarios</h1>} />
         <Route exact path='/counter' component={Counter} />
