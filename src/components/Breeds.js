@@ -1,6 +1,7 @@
 import React, { useEffect, useState }  from "react";
 import axios from 'axios';
 import Breed from "./Breed";
+import ListGroup from 'react-bootstrap/ListGroup'
 
 
 function Breeds()  {
@@ -21,13 +22,14 @@ function Breeds()  {
   
   return (
     <div>
-      <ul className="list-group list-group-flush">
-        <dl>
-          {Object.entries(breeds).map((breed) => (
+      <ListGroup Key="#link1">
+      <ListGroup.Item action href="#link1">
+      {Object.entries(breeds).map((breed) => (
             <Breed breed={breed} />
           ))}
-        </dl>
-      </ul>
+      </ListGroup.Item>
+      </ListGroup>
+      
     </div>
   );
 }
