@@ -22,15 +22,15 @@ function Breed  ({ breed })  {
         <Fragment key={breed[0]}>
         <dt>
             <Link to="/signup"><strong>{breed[0]}</strong></Link>
-            <div className="col-sm-4">
+        </dt>
+        <dd>{breed[1].join(' , ')}</dd>
+        <div className="col-sm-4">
                 <img
                     className="img-fluid"
                     src={image}
                     alt="Imagen de la película"
                 />
             </div>
-        </dt>
-        <dd>{breed[1].join(' , ')}</dd>
         <hr />
         </Fragment>
     </div>

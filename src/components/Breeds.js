@@ -13,7 +13,7 @@ function Breeds()  {
             `https://dog.ceo/api/breeds/list/all`
           );    
           const json = await response.data;  
-          console.log(json);   
+          
           setBreeds(json.message);   
       }
       fetchBreeds();
