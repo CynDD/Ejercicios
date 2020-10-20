@@ -1,6 +1,7 @@
 import Axios from "axios";
-import React, { Fragment, useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Card,  ListGroup, ListGroupItem } from "react-bootstrap";
+
 
 function Breed  ({ breed })  {
 
@@ -18,22 +19,17 @@ function Breed  ({ breed })  {
     }, );
 
   return (
-    <div className="row">
-        <Fragment key={breed[0]}>
-        <dt>
-            <Link to="/signup"><strong>{breed[0]}</strong></Link>
-        </dt>
-        <dd>{breed[1].join(' , ')}</dd>
-        <div className="col-sm-4">
-                <img
-                    className="img-fluid"
-                    src={image}
-                    alt="Imagen de la película"
-                />
-            </div>
-        <hr />
-        </Fragment>
-    </div>
+    <Card style={{ width: '18rem' }}>
+        <Card.Img variant="top" src={image} />
+        <Card.Body>
+            <Card.Link key={breed[0]} href="/signup">
+                <strong>{breed[0]}</strong>
+            </Card.Link>    
+        </Card.Body>
+        <ListGroup className="list-group-flush">
+            <ListGroupItem>{breed[1].join(' , ')}</ListGroupItem>
+        </ListGroup>
+    </Card>
   );
 };
 
