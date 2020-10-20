@@ -19,13 +19,15 @@ function Breeds()  {
       fetchBreeds();
     }, []);
 
+     
+    
   
   return (
     <div>
-      <ListGroup Key="#link1">
-      <ListGroup.Item action href="#link1">
+      <ListGroup key="#">
+      <ListGroup.Item action href="#">
       {Object.entries(breeds).map((breed) => (
-            <Breed breed={breed} />
+            <Breed key={breed.key} breed={breed} />
           ))}
       </ListGroup.Item>
       </ListGroup>
